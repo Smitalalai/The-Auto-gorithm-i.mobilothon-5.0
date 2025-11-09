@@ -1,100 +1,55 @@
-# I.Mobilothon-5.0
+# 🏆 I.Mobilothon-5.0: AI Driver Wellness Monitoring System (DMS)
 
-A driver-monitoring demo project with two Flask backends and a React + Vite frontend.
+[cite_start]**A high-fidelity, real-time driver-monitoring demo project addressing the problem of fatigue and stress[cite: 8]. [cite_start]It features two Flask backends for simulating/detecting driver impairment and a modern React + Vite frontend for visualization and AI-enhanced intervention[cite: 9].**
 
-This repository contains:
+## 🚀 Live Demo & Presentation
 
-- `Frontend/` — React + Vite UI (Tailwind, Mediapipe web camera utils). Default dev server: 5173.
-- `ai-assistant-backend/` — Lightweight Flask simulator (AURA). Fast to run locally for frontend development. Default port: 5000.
-- `Backend/` — Full frame-based Driver Monitoring System using MediaPipe and OpenCV. Heavier, intended for ML inference. Default port: 5001.
+**Experience the core UI and detection logic instantly—no local setup required:**
 
-## Quick overview
+👉 **[Launch Demo: I.Mobilothon-5.0 DMS](https://i-mobilothon-5-0-git-main-yashini-s-projects.vercel.app?_vercel_share=wWUTP27sgsAEm4oO08Nz4iBfANs4YfKb)**
 
-- The frontend captures webcam frames and posts base64 frames to a backend endpoint (`/api/process_frame`).
-- `ai-assistant-backend` simulates metrics and risk assessment with a background generator and offers a Gemini proxy endpoint (`/api/generate_alert`) (requires `GEMINI_API_KEY`).
-- `Backend` provides a frame-based detector implementation using MediaPipe/OpenCV and produces more realistic metrics but requires heavier dependencies.
+***
 
-## Quickstart (Windows / PowerShell)
+## ✨ Features & Solution Highlights
 
-Below are minimal steps to run the frontend and the lightweight backend for development.
+[cite_start]This solution directly addresses the **AI-Enhanced Driver Wellness Monitoring** problem statement [cite: 8] [cite_start]by focusing on predictive, privacy-preserving monitoring and subtle, non-distracting interventions[cite: 9].
 
-### 1) Frontend (dev)
+* [cite_start]**Multi-Modal Monitoring:** The system is designed to integrate data from multiple sources (simulated in this demo): Behavioral (facial cues), Physiological (HRV/ECG), and Vehicular (steering)[cite: 9].
+* **Predictive AI:** Aims to monitor the driver's physiological state to predict impairment **5–10 minutes before visible signs**[cite: 71].
+* [cite_start]**Driver Wellness Index (DWI):** Calculates a unified score using a multi-layer fusion model (CNN + LSTM/BiVIT Transformer) to classify fatigue or stress[cite: 26, 71, 123].
+* [cite_start]**AI-Enhanced Interventions:** Uses the Gemini proxy (simulating an OpenAI integration) to generate **safe, non-distracting** text-based interventions (e.g., subtle voice prompts, ambient lights, breathing exercises)[cite: 32, 184, 218, 220].
+* **Dual-Backend Flexibility:** Offers a **Lightweight Backend (`ai-assistant-backend`)** for rapid UI development and an **Full ML Backend (`Backend/`)** for realistic, frame-based Driver Monitoring using **MediaPipe** and **OpenCV**.
 
-Open a terminal in the `Frontend/` folder and run:
+***
 
-```powershell
+## 🖼️ Demo Screenshots
+
+The core functionality includes real-time facial landmark detection, a visual road simulator, and multi-stage alerts ranging from low-risk monitoring to critical intervention.
+
+| Alert Type | Description | Image |
+| :--- | :--- | :--- |
+| **Yawning Detection** | Low-risk intervention suggesting a break, triggered by mouth landmarks. | `![](./images/yawning_detection.png)` |
+| **Drowsiness Alert** | Critical intervention ("PULL OVER IMMEDIATELY") triggered by sustained eye closure (PERCLOS). | `![](./images/drowsiness_alert.png)` |
+| **Metrics & Risk** | Overview showing live FPS, DWI metrics, and continuous risk monitoring. | `![](./images/critical_risk.png)` |
+
+*(Note: You must save and upload the screenshots to your repository (e.g., in an `images/` folder) and replace the placeholder paths with the final image links.)*
+
+***
+
+## ⚡ Quickstart: Run the Demo Locally
+
+Below are the minimal steps to run the **Frontend** and the **Lightweight Backend** concurrently for the fastest local development and testing.
+
+### Prerequisites
+
+* **Node.js** (for frontend)
+* **Python 3.8+** (for backend)
+
+### 1. Launch the Frontend
+
+Open a terminal in the `Frontend/` folder:
+
+```bash
 cd Frontend
 npm install
 npm run dev
-```
-
-Vite will start (dev server usually on http://localhost:5173) and hot-reload as you edit.
-
-### 2) Lightweight backend (ai-assistant-backend)
-
-This backend is the fastest way to iterate the UI without installing heavy ML dependencies.
-
-```powershell
-cd ai-assistant-backend
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-# Optional: set Gemini API key (server-side generation)
-$env:GEMINI_API_KEY = 'YOUR_GEMINI_API_KEY'
-python app.py
-```
-
-By default the service listens on port `5000`. You can override the port with the `PORT` environment variable.
-
-Endpoints: `/api/start`, `/api/stop`, `/api/reset`, `/api/process_frame`, `/api/metrics`, `/api/assessment`, `/api/generate_alert`, `/api/health`.
-
-### 3) Full ML backend (Backend)
-
-This service depends on `mediapipe`, `opencv-python-headless`, `scipy`, and other native packages. Installing these on Windows can be error-prone — using Conda, WSL, or Docker is recommended.
-
-Example using Conda (recommended on Windows):
-
-```powershell
-conda create -n dms python=3.11 -y
-conda activate dms
-cd Backend
-pip install -r requirements.txt
-python app.py
-```
-
-If `pip install` fails for `mediapipe` or `opencv`, consider:
-- Using `conda` packages or `conda-forge` where available
-- Running the service inside WSL (Ubuntu) where prebuilt wheels are easier to install
-- Building/running a Linux Docker container (I can add a Dockerfile if you want)
-
-This service prints usage info and binds to port `5001` by default.
-
-## Health check (quick)
-
-From PowerShell you can probe a running backend like:
-
-```powershell
-# ai-assistant-backend (port 5000)
-Invoke-RestMethod -Uri http://localhost:5000/api/health
-
-# Backend (port 5001)
-Invoke-RestMethod -Uri http://localhost:5001/api/health
-```
-
-## Environment variables
-
-- `GEMINI_API_KEY` — optional, required if you want `ai-assistant-backend` to proxy to Google Generative Language (Gemini) for alert generation.
-- `PORT` — override the Flask app port (used by `ai-assistant-backend`) if needed.
-
-## Notes & recommendations
-
-- Use `ai-assistant-backend` for fast front-end development. Switch to `Backend` when you want real frame-based metrics.
-- Add an `.env.example` to document required environment variables and any default ports.
-- If you want, I can add Dockerfiles (for `Backend` especially) and a small pytest smoke-test for each service (`/api/health`).
-
-## Contributing
-
-Feel free to open issues or PRs. If you want me to add tests, Dockerfiles, or a consolidated dev script that launches frontend + lightweight backend concurrently, tell me which you'd prefer and I can implement it.
-
----
-Generated README — tailored to this repository's structure and local development workflow.
