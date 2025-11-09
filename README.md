@@ -102,13 +102,14 @@ A big thank you to **Team Auto-gorithm**!
 
   * **Smital Alai** ((https://github.com/Smitalalai)) 
   * **Pranav Kumbhojkar** ((https://github.com/PRANAVK3004))
-  * **Vaishnavi Thorat** ((https://www.google.com/search?q=https://github.com/contributor-3-github))
+  * **Vaishnavi Thorat** ((https://github.com/vai-sys))
   * **Yashini Pardeshi** ((https://github.com/Yashini13))
 
 <!-- end list -->
 
 ```
 ```
+
 
 
 
