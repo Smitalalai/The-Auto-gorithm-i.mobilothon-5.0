@@ -28,15 +28,10 @@ This solution directly addresses the **AI-Enhanced Driver Wellness Monitoring** 
 
 The core functionality includes real-time facial landmark detection, a visual road simulator, and multi-stage alerts ranging from low-risk monitoring to critical intervention.
 
-* **Yawning Detection Alert:** Low-risk intervention suggesting a break, triggered by mouth landmarks.
-    `![](./images/yawning_detection.png)`
-* **Drowsiness Alert:** Critical intervention ("PULL OVER IMMEDIATELY") triggered by sustained eye closure (PERCLOS).
-    `![](./images/drowsiness_alert.png)`
-* **Metrics & Risk Display:** Overview showing live FPS, DWI metrics, and continuous risk monitoring.
-    `![](./images/critical_risk.png)`
-
-*(Note: Please ensure these images are uploaded to the specified path and the placeholder links are updated.)*
-
+* `![](demo screenshots/ss1.jpg)`
+* `![](demo screenshots/moderate .jpg)`
+* `![](demo screenshots/metrics.jpg)`
+* `![](demo screenshots/report.jpg)`
 ***
 
 ## ⚡ Quickstart: Run the Demo Locally
@@ -109,4 +104,5 @@ A big thank you to **Team Auto-gorithm**!
 
 ```
 ```
+
 
