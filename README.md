@@ -16,11 +16,11 @@
 
 This solution directly addresses the **AI-Enhanced Driver Wellness Monitoring** problem statement by focusing on predictive, privacy-preserving monitoring and subtle, non-distracting interventions.
 
-**Multi-Modal Monitoring:** The system is designed to integrate data from multiple sources (simulated in this demo): Behavioral (facial cues like PERCLOS, Gaze), Physiological (HRV, ECG, GSR), and Vehicular (steering entropy and micro-corrections).
-**Predictive AI:** Aims to monitor the driver's physiological state to **predict impairment 5–10 minutes before visible signs**.
-**Driver Wellness Index (DWI):** Calculates a unified score using a multi-layer fusion model (**CNN + LSTM/BiVIT Transformer**) to classify fatigue or stress.
-**AI-Enhanced Interventions:** Uses the Gemini proxy (simulating an **OpenAI/HMI** integration) to generate **safe, non-distracting** text-based interventions (e.g., subtle voice prompts, ambient lights, breathing exercises, scheduled breaks).
-**Dual-Backend Flexibility:** Offers a **Lightweight Backend (`ai-assistant-backend`)** for rapid UI development and an **Full ML Backend (`Backend/`)** for realistic, frame-based Driver Monitoring using **MediaPipe** and **OpenCV**.
+* **Multi-Modal Monitoring:** The system is designed to integrate data from multiple sources (simulated in this demo): Behavioral (facial cues like PERCLOS, Gaze), Physiological (HRV, ECG, GSR), and Vehicular (steering entropy and micro-corrections).
+* **Predictive AI:** Aims to monitor the driver's physiological state to **predict impairment 5–10 minutes before visible signs**.
+* **Driver Wellness Index (DWI):** Calculates a unified score using a multi-layer fusion model (**CNN + LSTM/BiVIT Transformer**) to classify fatigue or stress.
+* **AI-Enhanced Interventions:** Uses the Gemini proxy (simulating an **OpenAI/HMI** integration) to generate **safe, non-distracting** text-based interventions (e.g., subtle voice prompts, ambient lights, breathing exercises, scheduled breaks).
+* **Dual-Backend Flexibility:** Offers a **Lightweight Backend (`ai-assistant-backend`)** for rapid UI development and an **Full ML Backend (`Backend/`)** for realistic, frame-based Driver Monitoring using **MediaPipe** and **OpenCV**.
 
 ***
 
@@ -28,12 +28,14 @@ This solution directly addresses the **AI-Enhanced Driver Wellness Monitoring** 
 
 The core functionality includes real-time facial landmark detection, a visual road simulator, and multi-stage alerts ranging from low-risk monitoring to critical intervention.
 
-| Alert Type | Description | Image |
-| :--- | :--- | :--- |
-| **Yawning Detection** | Low-risk intervention suggesting a break, triggered by mouth landmarks. | `![](./images/yawning_detection.png)` |
-| **Drowsiness Alert** | Critical intervention ("PULL OVER IMMEDIATELY") triggered by sustained eye closure (PERCLOS). | `![](./images/drowsiness_alert.png)` |
-| **Metrics & Risk** | Overview showing live FPS, DWI metrics, and continuous risk monitoring. | `![](./images/critical_risk.png)` |
+* **Yawning Detection Alert:** Low-risk intervention suggesting a break, triggered by mouth landmarks.
+    `![](./images/yawning_detection.png)`
+* **Drowsiness Alert:** Critical intervention ("PULL OVER IMMEDIATELY") triggered by sustained eye closure (PERCLOS).
+    `![](./images/drowsiness_alert.png)`
+* **Metrics & Risk Display:** Overview showing live FPS, DWI metrics, and continuous risk monitoring.
+    `![](./images/critical_risk.png)`
 
+*(Note: Please ensure these images are uploaded to the specified path and the placeholder links are updated.)*
 
 ***
 
@@ -107,3 +109,4 @@ A big thank you to **Team Auto-gorithm**!
 
 ```
 ```
+
