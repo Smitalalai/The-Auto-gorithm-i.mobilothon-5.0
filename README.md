@@ -26,12 +26,17 @@ This solution directly addresses the **AI-Enhanced Driver Wellness Monitoring** 
 
 ## 🖼️ Demo Screenshots
 
-The core functionality includes real-time facial landmark detection, a visual road simulator, and multi-stage alerts ranging from low-risk monitoring to critical intervention.
+The core functionality includes real-time facial landmark detection, a visual road simulator, and multi-stage alerts ranging from **low-risk monitoring** to **critical intervention**.
 
-* `![](demo screenshots/ss1.jpg)`
-* `![](demo screenshots/moderate .jpg)`
-* `![](demo screenshots/metrics.jpg)`
-* `![](demo screenshots/report.jpg)`
+* **Low-Risk/Continuous Monitoring:** Showing real-time frame processing and a stable status.
+    `![](demo screenshots/ss1.jpg)`
+* **Moderate Risk Alert:** Demonstrating an intervention cue, such as yawning detection or mild distraction.
+    `![](demo screenshots/moderate .jpg)`
+* **Critical Metrics View:** Displaying the core DWI metrics (simulated/real) that trigger the intervention logic.
+    `![](demo screenshots/metrics.jpg)`
+* **Post-Drive Report/Summary:** Showcasing the final output or historical data visualization.
+    `![](demo screenshots/report.jpg)`
+
 ***
 
 ## ⚡ Quickstart: Run the Demo Locally
@@ -104,5 +109,6 @@ A big thank you to **Team Auto-gorithm**!
 
 ```
 ```
+
 
 
