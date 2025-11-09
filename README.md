@@ -1,6 +1,6 @@
 # 🏆 I.Mobilothon-5.0: AI Driver Wellness Monitoring System (DMS)
 
-[cite_start]**A high-fidelity, real-time driver-monitoring demo project addressing the problem of fatigue and stress[cite: 8]. [cite_start]It features two Flask backends for simulating/detecting driver impairment and a modern React + Vite frontend for visualization and AI-enhanced intervention[cite: 9].**
+**A high-fidelity, real-time driver-monitoring demo project addressing the problem of fatigue and stress. It features two Flask backends for simulating/detecting driver impairment and a modern React + Vite frontend for visualization and AI-enhanced intervention.**
 
 ## 🚀 Live Demo & Presentation
 
@@ -12,19 +12,19 @@
 
 ## ✨ Features & Solution Highlights
 
-[cite_start]This solution directly addresses the **AI-Enhanced Driver Wellness Monitoring** problem statement [cite: 8] [cite_start]by focusing on predictive, privacy-preserving monitoring and subtle, non-distracting interventions[cite: 9].
+This solution directly addresses the **AI-Enhanced Driver Wellness Monitoring** problem statement [cite: 8, 9] by focusing on predictive, privacy-preserving monitoring and subtle, non-distracting interventions[cite: 39, 42].
 
-* [cite_start]**Multi-Modal Monitoring:** The system is designed to integrate data from multiple sources (simulated in this demo): Behavioral (facial cues), Physiological (HRV/ECG), and Vehicular (steering)[cite: 9].
-* **Predictive AI:** Aims to monitor the driver's physiological state to predict impairment **5–10 minutes before visible signs**[cite: 71].
-* [cite_start]**Driver Wellness Index (DWI):** Calculates a unified score using a multi-layer fusion model (CNN + LSTM/BiVIT Transformer) to classify fatigue or stress[cite: 26, 71, 123].
-* [cite_start]**AI-Enhanced Interventions:** Uses the Gemini proxy (simulating an OpenAI integration) to generate **safe, non-distracting** text-based interventions (e.g., subtle voice prompts, ambient lights, breathing exercises)[cite: 32, 184, 218, 220].
-* **Dual-Backend Flexibility:** Offers a **Lightweight Backend (`ai-assistant-backend`)** for rapid UI development and an **Full ML Backend (`Backend/`)** for realistic, frame-based Driver Monitoring using **MediaPipe** and **OpenCV**.
+* [cite_start]**Multi-Modal Monitoring:** The system is designed to integrate data from multiple sources (simulated in this demo): Behavioral (facial cues), Physiological (HRV/ECG), and Vehicular (steering)[cite: 39, 47].
+* [cite_start]**Predictive AI:** Aims to monitor the driver's physiological state to **predict impairment 5–10 minutes before visible signs**[cite: 71].
+* **Driver Wellness Index (DWI):** Calculates a unified score using a multi-layer fusion model (CNN + LSTM/BiVIT Transformer) to classify fatigue or stress[cite: 26, 204].
+* [cite_start]**AI-Enhanced Interventions:** Uses the Gemini proxy (simulating an **OpenAI** integration) to generate **safe, non-distracting** text-based interventions (e.g., subtle voice prompts, ambient lights, breathing exercises)[cite: 39, 138, 184].
+* [cite_start]**Dual-Backend Flexibility:** Offers a **Lightweight Backend (`ai-assistant-backend`)** for rapid UI development and an **Full ML Backend (`Backend/`)** for realistic, frame-based Driver Monitoring using **MediaPipe** and **OpenCV**[cite: 71, 231].
 
 ***
 
 ## 🖼️ Demo Screenshots
 
-The core functionality includes real-time facial landmark detection, a visual road simulator, and multi-stage alerts ranging from low-risk monitoring to critical intervention.
+The core functionality includes real-time facial landmark detection, a visual road simulator, and multi-stage alerts ranging from low-risk monitoring to critical intervention[cite: 170, 174, 164].
 
 | Alert Type | Description | Image |
 | :--- | :--- | :--- |
@@ -32,7 +32,7 @@ The core functionality includes real-time facial landmark detection, a visual ro
 | **Drowsiness Alert** | Critical intervention ("PULL OVER IMMEDIATELY") triggered by sustained eye closure (PERCLOS). | `![](./images/drowsiness_alert.png)` |
 | **Metrics & Risk** | Overview showing live FPS, DWI metrics, and continuous risk monitoring. | `![](./images/critical_risk.png)` |
 
-*(Note: You must save and upload the screenshots to your repository (e.g., in an `images/` folder) and replace the placeholder paths with the final image links.)*
+*(Note: Please ensure the images are uploaded to the specified path and the placeholder links are correct.)*
 
 ***
 
