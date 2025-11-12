@@ -46,7 +46,7 @@ Below are the minimal steps to run the **Frontend** and the **Lightweight Backen
 ### Prerequisites
 
 * **Node.js** (for frontend)
-* **Python 3.8+** (for backend)
+* **Python 3.11+** (for backend)
 
 ### 1. Launch the Frontend
 
@@ -109,6 +109,7 @@ A big thank you to **Team Auto-gorithm**!
 
 ```
 ```
+
 
 
 
